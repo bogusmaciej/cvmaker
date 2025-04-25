@@ -1,0 +1,58 @@
+<html>
+    <body>
+        <h1 class="name">{{ personal_info.name }}</h1>
+        <h3 class="profession">{{ personal_info.profession }}</h3>
+        <div class="double-line"></div>
+        
+        <section>{{ personal_info.description }}</section>
+        
+        {% if personal_info.phone is not none %}
+        <h2>Kontakt</h2>
+        <div class="single-line"></div>
+        <section>
+            <div>Telefon: {{ personal_info.phone }}</div>
+            <div>Email: {{ personal_info.email }}</div>
+        </section>
+        {% endif %}
+
+        {% if education is defined and education|length > 0 %}
+        <h2>Edukacja</h2>
+        <div class="single-line"></div>
+        <section>
+        {% for school in education %}
+            <div class="experience_block">
+                <div class="years">{{ school.year_start }} - {{ school.year_end }}</div>
+                <div class="place_name">{{ school.school }}</div>
+                <div class="experience_description">{{ school.major }}</div>
+            </div>
+        {% endfor %}
+        </section>
+        {% endif %}
+        
+        {% if experience is defined and experience|length > 0 %}
+        <h2>Doświadczenie</h2>
+        <div class="single-line"></div>
+        <section>
+        {% for job in experience %}
+            <div class="experience_block">
+                <div class="years">{{ job.year_start }} - {{ job.year_end }}</div>
+                <div class="place_name">{{ job.position }} w {{ job.company }}</div>
+                <div class="experience_description">{{ job.description }}</div>
+            </div>
+        {% endfor %}
+        </section>
+        {% endif %}
+
+        {% if skills is defined and skills|length > 0 %}
+        <h2>Umiejętności</h2>
+        <div class="single-line"></div>
+        <section>
+            <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+    </body>
+</html>

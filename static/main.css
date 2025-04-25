@@ -1,0 +1,165 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #4CAF50;
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Education Section */
+#education-list {
+  margin-top: 20px;
+}
+
+.education-entry {
+  margin-bottom: 15px;
+}
+
+.education-entry .education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.education-entry .education-header .school-name {
+  font-size: 16px;
+  color: #007BFF;
+}
+
+.education-entry .education-details {
+  display: none;
+  margin-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.education-entry .education-details input {
+  margin-bottom: 10px;
+}
+
+.education-entry .education-details.show {
+  display: block;
+}
+
+.education-entry .remove-education {
+  display: none;
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.education-entry .remove-education:hover {
+  background-color: #e04e30;
+}
+
+hr {
+  border: 1px solid #eee;
+  margin-top: 10px;
+}
+
+/* Button to add education */
+button[type="button"] {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+button[type="button"]:hover {
+  background-color: #ddd;
+}
+
+/* Form and Button Styling */
+input, button {
+  height: 40px;  /* Ustaw wysokość przycisków i inputów na tę samą wartość */
+  padding: 0 10px;  /* Usuwamy padding pionowy, żeby zachować równą wysokość */
+}
+
+button {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center; /* Ustawienie wyrównania w pionie */
+  justify-content: center; /* Wyrównanie treści przycisku */
+}
+
+button[type="button"], .toggle-education {
+  padding: 0 10px;  /* Padding poziomy dla przycisków */
+}
+
+.education-entry .toggle-education {
+  height: 40px;  /* Dostosuj wysokość przycisków toggle */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
